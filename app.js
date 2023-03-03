@@ -10,7 +10,7 @@ const { PORT, MONGO_URL } = process.env;
 const app = express();
 const http = require("http").Server(app);
 const socket = require("socket.io")(http, {
-  cors: { origin: "http://localhost:3000" },
+  cors: { origin: "https://socket-front.onrender.com" },
 });
 global.onlineUsers = new Map();
 
