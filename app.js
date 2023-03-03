@@ -8,6 +8,7 @@ const { PORT, MONGO_URL } = process.env;
 
 
 const app = express();
+app.use(cors())
 const http = require("http").Server(app);
 const socket = require("socket.io")(http, {
   cors: { origin: "https://socket-front.onrender.com" },
